@@ -1,0 +1,25 @@
+{
+  "cloudRevokeApi": true,
+  "salt": {
+    "recipes": [
+      {
+        "width": 360,
+        "height": 480,
+        "mimeType": "dsfasd",
+        "name": "sdfasf"
+      }
+    ],
+    "url": "sdfadf"
+  },
+  "title": "some",
+  "customer": "some",
+  "atp": {
+    "url": "some"
+  },
+  "cloudShare": {
+    "url": "soe"
+  },
+  "taggingManager": {
+    "url": "some"
+  }
+}
