@@ -13,6 +13,46 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: "SNC" # Used in routes, e.g., /admin/collections/blog
+    label: "SNC" # Used in the UI
+    folder: "content" # The path to the folder where the markdown files are stored
+    extension: json
+    format: json
+    create: true # Allow users to create new markdown files.
+    fields: # The fields for front matter. You will need to modify fields according to your project.
+      - {label: "File Name", name: "title", widget: "string"}
+      - {label: "customer", name: "customer", widget: "string"}
+      - {label: "cloudRevokeApi", name: "cloudRevokeApi", widget: "boolean", default: false}
+      - label: Atp
+        name: "atp"
+        widget: "object"
+        fields:
+          - {label: "url", name: "url", widget: "string"}
+      - label: CloudShare
+        name: "cloudShare"
+        widget: "object"
+        fields:
+          - {label: "url", name: "url", widget: "string"}          
+
+      - label: taggingManager
+        name: "taggingManager"
+        widget: "object"
+        fields:
+          - {label: "url", name: "url", widget: "string"}
+
+      - label: salt
+        name: "salt"
+        widget: "object"
+        fields:
+          - {label: "url", name: "url", widget: "string"}
+          - label: "recipes"
+            name: "recipes"
+            widget: "list"
+            fields:
+              - {label: "mimeType", name: "mimeType", widget: "string"}
+              - {label: "name", name: "name", widget: "string"}
+              - {label: "width", name: "width", widget: "number", default: 360}
+              - {label: "height", name: "height", widget: "number", default: 480}
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
